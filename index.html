@@ -115,10 +115,6 @@
                         <td>' + (feature.properties['Foto'] !== null ? autolinker.link(feature.properties['Foto'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">PHOTO</th>\
-                        <td>' + (feature.properties['PHOTO'] !== null ? '<img src="images/' + String(feature.properties['PHOTO']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Rank</th>\
                         <td>' + (feature.properties['Desc_QS WUR'] !== null ? autolinker.link(feature.properties['Desc_QS WUR'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -129,6 +125,10 @@
                     <tr>\
                         <th scope="row">Fakultas</th>\
                         <td>' + (feature.properties['Desc_Fakultas'] !== null ? autolinker.link(feature.properties['Desc_Fakultas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                     <tr>\
+                        <th scope="row">PHOTO</th>\
+                        <td>' + (feature.properties['PHOTO'] !== null ? '<img src="images/' + String(feature.properties['PHOTO']).replace(/[\\\/:]/g, '_').trim() + 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
